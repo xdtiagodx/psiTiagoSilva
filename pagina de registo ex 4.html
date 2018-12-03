@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<script src="jquery-3.3.1.min.js"></script>
+
+<script>
+		$(document).ready(function(){
+		        $(".nome").hide();
+		        $(".email").hide();
+		        $(".login").hide();
+		        $(".password").hide();
+
+
+		 	$("#imagem").click(function(){
+		 		$(this).animate({width:'hide' , height:"hide"},1000)
+    			$(".nome").show();
+    			$('.nome').focus();
+
+			});
+
+			$(".nome").on({
+			    focus:function(){
+    				$(this).css("background-color", "#ff00ff");
+				},
+
+			    blur:function(){
+    				$(this).css("background-color", "#ffffff");
+				},
+
+				keypress:function(event){
+					if (event.which==13){
+       				 	$(".email").show();
+       				 	$('.email').focus();
+       				}
+    			}
+			});
+
+			$(".email").on({
+			    focus:function(){
+    				$(this).css("background-color", "#ff00ff");
+				},
+
+			    blur:function(){
+    				$(this).css("background-color", "#ffffff");
+				},
+
+				keypress:function(event){
+					if (event.which==13){
+       				 	$(".login").show();
+       				 	$('.login').focus();
+       				}
+    			}
+			});
+
+			$(".login").on({
+			    focus:function(){
+    				$(this).css("background-color", "#ff00ff");
+				},
+
+
+			    blur:function(){
+    				$(this).css("background-color", "#ffffff");
+				},
+
+				keypress:function(event){
+					if (event.which==13){
+       				 	$(".password").show();
+       				 	$('.password').focus();
+       				}
+    			}
+			});
+
+			$(".password").on({
+			    focus:function(){
+    				$(this).css("background-color", "#ff00ff");
+				},
+
+			    blur:function(){
+    				$(this).css("background-color", "#ffffff");
+				},
+
+				keypress:function(event){
+					if (event.which==13){
+					    $(".nome").fadeOut("slow");
+					    $(".email").fadeOut("slow");
+					    $(".login").fadeOut("slow");
+					    $(".password").fadeOut("slow");
+				    }
+    			}
+			})
+		});
+</script>
+
+</head>
+
+<body>
+
+------- Página de Registo -------
+<br> <br> <div class="nome"> Nome: > <input class="nome" type="text" name=""> <br> <br> </div>
+<div class="email"> Email: > <input class="email" type="text" name=""> <br> <br> </div>
+<div class="login"> Login: > <input class="login" name=""> <br> <br> </div>
+<div class="password"> Password: > <input class="password" type="Password" name=""> <br> <br> </div>
+---------------------------------
+<br> <br> <img id="imagem" src="images/butao.jpg" style="width:250;height:200px";>
+</body>
+
+</html>
